@@ -1,0 +1,15 @@
+package com.projectstein.cursomc.services;
+
+import org.springframework.mail.SimpleMailMessage;
+
+import com.projectstein.cursomc.domain.Pedido;
+
+public interface EmailService {
+	
+	
+	void sendOrderConfirmationEmail(Pedido obj);
+	
+	void sendEmail(SimpleMailMessage msg);
+	
+
+}
