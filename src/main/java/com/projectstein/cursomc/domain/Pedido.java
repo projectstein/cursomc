@@ -141,17 +141,17 @@ public class Pedido implements Serializable {
 
 	@Override
 	public String toString() {
-		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt","BR"));
-		SimpleDateFormat stf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");  
+		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+		SimpleDateFormat stf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 		StringBuilder builder = new StringBuilder();
 		builder.append("Pedido número: ");
-		builder.append(getId());
+		builder.append(getId()+"\n");
 		builder.append(" Instante: ");
-		builder.append(stf.format(getInstante()));
+		builder.append(stf.format(getInstante())+"\n");
 		builder.append(" Cliente: ");
-		builder.append(getCliente().getNome());
+		builder.append(getCliente().getNome()+"\n");
 		builder.append(" Situação do Pagamento: ");
-		builder.append(getPagamento().getEstado().getDescricao());
+		builder.append(getPagamento().getEstado().getDescricao()+"\n");
 		builder.append("\nDetalhes:\n");
 		for (ItemPedido ip : getItens()) {
 			builder.append(ip.toString());
