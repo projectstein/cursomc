@@ -7,8 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
-
-import com.projectstein.cursomc.domain.Categoria;
 import com.projectstein.cursomc.domain.Cliente;
 import com.projectstein.cursomc.domain.ItemPedido;
 import com.projectstein.cursomc.domain.PagamentoComBoleto;
